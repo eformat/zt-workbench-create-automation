@@ -16,6 +16,7 @@ showroom:
   projectName: demo
   workbenchName: lab
   images:
+    oseCli: registry.redhat.io/openshift4/ose-cli:latest
     gitCloner: quay.io/rhpds/git-cloner:v1.1.5
     antora: quay.io/rhpds/antora:v1.3.0
     content: quay.io/rhpds/showroom-content:v1.4.2

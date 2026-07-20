@@ -18,6 +18,31 @@ spec:
     spec:
       serviceAccountName: showroom
       initContainers:
+        - name: cluster-setup
+          image: {{ .Values.showroom.images.oseCli }}
+          command:
+            - /bin/sh
+            - -c
+            - |
+              echo "Patching IngressController to remove X-Frame-Options and Content-Security-Policy"
+              oc patch ingresscontroller/default -n openshift-ingress-operator --type=merge -p '{
+                "spec": {
+                  "httpHeaders": {
+                    "actions": {
+                      "response": [
+                        {
+                          "name": "X-Frame-Options",
+                          "action": { "type": "Delete" }
+                        },
+                        {
+                          "name": "Content-Security-Policy",
+                          "action": { "type": "Delete" }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }'
         - name: git-cloner
           image: {{ .Values.showroom.images.gitCloner }}
           env:
