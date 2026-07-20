@@ -1,0 +1,18 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: showroom
+  namespace: {{ .Values.showroom.namespace }}
+  annotations:
+    haproxy.router.openshift.io/timeout: 1h
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  to:
+    kind: Service
+    name: showroom
+    weight: 100

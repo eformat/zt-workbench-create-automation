@@ -12,3 +12,9 @@ datasciencecluster:
   git:
     path: cluster/platform/bootstrap/datasciencecluster
     <<: *git_defaults
+
+showroom:
+  enabled: true
+  git:
+    path: cluster/platform/bootstrap/showroom
+    <<: *git_defaults

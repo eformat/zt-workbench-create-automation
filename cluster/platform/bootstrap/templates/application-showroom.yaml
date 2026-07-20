@@ -1,0 +1,33 @@
+---
+{{ if .Values.showroom.enabled -}}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: showroom
+  namespace: openshift-gitops
+spec:
+  project: platform
+  source:
+    repoURL: {{ .Values.showroom.git.repoURL }}
+    targetRevision: {{ .Values.showroom.git.targetRevision }}
+    path: {{ .Values.showroom.git.path }}
+    helm:
+      values: |
+        deployer:
+        {{- .Values.deployer | toYaml | nindent 10 }}
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      enabled: true
+    syncOptions:
+      - CreateNamespace=true
+      - SkipDryRunOnMissingResource=true
+      - RespectIgnoreDifferences=true
+    retry:
+      limit: 10
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+{{- end }}
