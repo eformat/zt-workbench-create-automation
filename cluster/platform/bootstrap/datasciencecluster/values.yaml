@@ -6,13 +6,11 @@ datasciencecluster:
       managementState: Managed
     workbenches:
       managementState: Managed
-    datasciencepipelines:
-      managementState: Managed
-    modelmeshserving:
-      managementState: Managed
+    aipipelines:
+      managementState: Removed
     kserve:
-      managementState: Managed
-    codeflare:
+      managementState: Removed
+    modelregistry:
       managementState: Removed
     ray:
       managementState: Removed
@@ -22,5 +20,11 @@ datasciencecluster:
       managementState: Removed
     trainingoperator:
       managementState: Removed
-    modelregistry:
-      managementState: Managed
+    trainer:
+      managementState: Removed
+    mlflowoperator:
+      managementState: Removed
+    feastoperator:
+      managementState: Removed
+    llamastackoperator:
+      managementState: Removed
