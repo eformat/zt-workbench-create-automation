@@ -1,6 +1,6 @@
 ---
 default_settings: &git_defaults
-  repoURL: https://github.com/rhpds/zt-workbench-create-automation
+  repoURL: https://github.com/eformat/zt-workbench-create-automation
   targetRevision: main
 
 deployer:
