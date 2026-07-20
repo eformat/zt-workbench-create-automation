@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: infra-bootstrap
+description: Infrastructure bootstrap — ArgoCD AppProjects, platform wiring, operator subscriptions
+version: 0.1.0
+type: application

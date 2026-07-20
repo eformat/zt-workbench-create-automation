@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: platform-bootstrap
+description: Platform bootstrap — RHOAI DataScienceCluster and platform services
+version: 0.1.0
+type: application

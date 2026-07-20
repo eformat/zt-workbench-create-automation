@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: rhoai-operator
+description: Red Hat OpenShift AI operator subscription via OLM
+version: 0.1.0
+type: application

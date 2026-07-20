@@ -1,0 +1,26 @@
+---
+datasciencecluster:
+  name: default-dsc
+  components:
+    dashboard:
+      managementState: Managed
+    workbenches:
+      managementState: Managed
+    datasciencepipelines:
+      managementState: Managed
+    modelmeshserving:
+      managementState: Managed
+    kserve:
+      managementState: Managed
+    codeflare:
+      managementState: Removed
+    ray:
+      managementState: Removed
+    trustyai:
+      managementState: Removed
+    kueue:
+      managementState: Removed
+    trainingoperator:
+      managementState: Removed
+    modelregistry:
+      managementState: Managed

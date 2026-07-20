@@ -1,0 +1,29 @@
+---
+apiVersion: datasciencecluster.opendatahub.io/v1
+kind: DataScienceCluster
+metadata:
+  name: {{ .Values.datasciencecluster.name }}
+spec:
+  components:
+    dashboard:
+      managementState: {{ .Values.datasciencecluster.components.dashboard.managementState }}
+    workbenches:
+      managementState: {{ .Values.datasciencecluster.components.workbenches.managementState }}
+    datasciencepipelines:
+      managementState: {{ .Values.datasciencecluster.components.datasciencepipelines.managementState }}
+    modelmeshserving:
+      managementState: {{ .Values.datasciencecluster.components.modelmeshserving.managementState }}
+    kserve:
+      managementState: {{ .Values.datasciencecluster.components.kserve.managementState }}
+    codeflare:
+      managementState: {{ .Values.datasciencecluster.components.codeflare.managementState }}
+    ray:
+      managementState: {{ .Values.datasciencecluster.components.ray.managementState }}
+    trustyai:
+      managementState: {{ .Values.datasciencecluster.components.trustyai.managementState }}
+    kueue:
+      managementState: {{ .Values.datasciencecluster.components.kueue.managementState }}
+    trainingoperator:
+      managementState: {{ .Values.datasciencecluster.components.trainingoperator.managementState }}
+    modelregistry:
+      managementState: {{ .Values.datasciencecluster.components.modelregistry.managementState }}

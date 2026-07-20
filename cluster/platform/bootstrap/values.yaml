@@ -1,0 +1,14 @@
+---
+default_settings: &git_defaults
+  repoURL: https://github.com/rhpds/zt-workbench-create-automation
+  targetRevision: main
+
+deployer:
+  domain: apps.cluster.example.com
+  apiUrl: https://api.cluster.example.com:6443
+
+datasciencecluster:
+  enabled: true
+  git:
+    path: cluster/platform/bootstrap/datasciencecluster
+    <<: *git_defaults

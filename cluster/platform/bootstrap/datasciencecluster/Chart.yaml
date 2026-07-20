@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: datasciencecluster
+description: Red Hat OpenShift AI DataScienceCluster configuration
+version: 0.1.0
+type: application

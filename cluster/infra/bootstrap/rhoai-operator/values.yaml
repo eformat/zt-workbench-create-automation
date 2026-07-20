@@ -1,0 +1,8 @@
+---
+operator:
+  channel: fast
+  installPlanApproval: Automatic
+  name: rhods-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  namespace: redhat-ods-operator
